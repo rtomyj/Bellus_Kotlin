@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Bellus</string>
+
+    <string name="book_appt">Book Appointment</string>
+    <string name="gallery">Gallery</string>
+    <string name="about">About</string>
+
+    <string name="booking_contentDescription">Picture for booking button</string>
+    <string name="gallery_contentDescription">Picture for gallery button</string>
+    <string name="about_contentDescription">Picture for about button</string>
+</resources>

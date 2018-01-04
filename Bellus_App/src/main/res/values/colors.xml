@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#9C27B0</color>
+    <color name="colorPrimaryDark">#7B1FA2</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="parentBackgroundColor">#fdfafe</color>
+    <color name="childBackgroundColor">#f6f6f6</color>
+
+
+    <color name="greenBackground">#00C853</color>
+    <color name="tealBackground">#009688</color>
+    <color name="amberBackground">#FFB300</color>
+
+
+    <color name="lightTextColor">#fff</color>
+
+</resources>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/parentBackgroundColor"
+    tools:context="com.corp_awesome.bellus.domus">
+
+    <android.support.v7.widget.CardView
+        style="@style/CardViewBase"
+        android:onClick="bookAppointment"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/greenBackground"
+            android:orientation="horizontal">
+            
+            <ImageView
+                android:id="@+id/booking_IV"
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_height="90dp"
+                android:layout_weight="65"
+                android:contentDescription="@string/booking_contentDescription"/>
+
+            <TextView
+                style="@style/LightHeaderText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="35"
+                android:text="@string/book_appt"/>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        style="@style/CardViewBase">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/tealBackground"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="35"
+            android:layout_gravity="center"
+            style="@style/LightHeaderText"
+            android:text="@string/gallery"/>
+
+        <ImageView
+            android:id="@+id/gallery_IV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="65"
+            android:contentDescription="@string/gallery_contentDescription"/>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        style="@style/CardViewBase"
+        android:onClick="about">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/amberBackground"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/about_IV"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:layout_weight="65"
+                android:contentDescription="@string/about_contentDescription"/>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="35"
+                android:layout_gravity="center"
+                style="@style/LightHeaderText"
+                android:text="@string/about"/>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+</android.widget.LinearLayout>

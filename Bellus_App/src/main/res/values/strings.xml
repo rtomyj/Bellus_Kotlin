@@ -8,4 +8,8 @@
     <string name="booking_contentDescription">Picture for booking button</string>
     <string name="gallery_contentDescription">Picture for gallery button</string>
     <string name="about_contentDescription">Picture for about button</string>
+
+
+    <string name="primary_email_address">strawberryshortcake@whatever.com</string>
+    <string name="primary_phone_number">815641158X‬</string>
 </resources>

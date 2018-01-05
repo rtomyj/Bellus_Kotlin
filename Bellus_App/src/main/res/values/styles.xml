@@ -25,5 +25,32 @@
         <item name="cardCornerRadius">5dp</item>
     </style>
 
+    <style name="InfoTextBig" >
+    <item name="android:textStyle">bold</item>
+    <item name="android:textSize">34sp</item>
+    <item name="android:textColor">@color/header1TextColor</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+
+</style>
+
+    <style name="InfoTextMedium" >
+    <item name="android:textSize">20sp</item>
+    <item name="android:textColor">@color/header2TextColor</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:fontFamily">sans-serif</item>
+
+</style>
+
+    <style name="InfoTextSmall" >
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/header3TextColor</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif</item>
+
+    </style>
+
 
 </resources>

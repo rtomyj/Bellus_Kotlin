@@ -6,10 +6,9 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.TextView
-import org.w3c.dom.Text
 
 /**
- *  Activity class that displays info about the services/service provider
+ *  Activity class that displays info about_img the services/service provider
  *
  */
 

@@ -15,8 +15,8 @@ class domus : AppCompatActivity() {
         val aboutIV: ImageView = findViewById(R.id.about_IV)
         val resources = resources
 
-        PictureMethods.setScaledBitmap(bookingIV, resources, R.drawable.booking)
-        PictureMethods.setScaledBitmap(aboutIV, resources, R.drawable.about)
+        PictureMethods.setScaledBitmap(bookingIV, resources, R.drawable.booking_img)
+        PictureMethods.setScaledBitmap(aboutIV, resources, R.drawable.about_img)
 
     }
 

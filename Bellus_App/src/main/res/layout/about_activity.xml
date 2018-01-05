@@ -17,7 +17,7 @@
             android:baseline="@dimen/cardview_default_elevation"
             android:drawingCacheQuality="high"
             android:scrollY="-20dp"
-            android:src="@drawable/about_img"/>
+            android:src="@drawable/about_rose_img"/>
 
         <TextView
             style="@style/InfoTextBig"

@@ -3,7 +3,7 @@
           package="com.corp_awesome.bellus">
 
     <!--
-        Attributes about the application
+        Attribuabout_imgbout the application
         -->
     <application
         android:allowBackup="true"
@@ -14,7 +14,7 @@
         android:theme="@style/AppTheme">
 
         <!--
-        describes the activities available to the app and modifies attributes about them
+        describes the activities available to the app and modifies attribuabout_imgbout them
         -->
         <activity android:name=".domus"
                   android:screenOrientation="portrait">

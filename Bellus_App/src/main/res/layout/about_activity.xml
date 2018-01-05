@@ -33,10 +33,9 @@
 
             <ImageView
                 android:id="@+id/phoneIV"
-                android:layout_marginRight="30dp"
+                android:layout_marginRight="25dp"
                 android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:scaleType="centerCrop"
+                android:layout_height="60dp"
                 android:clickable="true"
                 android:focusable="true"
                 android:onClick="smsClick"
@@ -44,8 +43,8 @@
 
             <ImageView
                 android:id="@+id/emailIV"
-                android:layout_marginRight="35dp"
-                android:layout_width="50dp"
+                android:layout_marginRight="25dp"
+                android:layout_width="60dp"
                 android:layout_height="50dp"
                 android:clickable="true"
                 android:focusable="true"
@@ -55,12 +54,13 @@
 
             <ImageView
                 android:id="@+id/instaIV"
-                android:layout_marginRight="35dp"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_marginRight="25dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:clickable="true"
                 android:focusable="true"
-                android:adjustViewBounds="true"/>
+                android:scaleType="centerCrop"
+                />
 
 
             <ImageView

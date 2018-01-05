@@ -1,6 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-</LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:baseline="@dimen/cardview_default_elevation"
+            android:drawingCacheQuality="high"
+            android:scrollY="-20dp"
+            android:src="@drawable/about_img"/>
+
+        <TextView
+            style="@style/InfoTextBig"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:text="Rose Gomez"/>
+
+        <TextView
+            android:id="@+id/phone_TV"
+            style="@style/InfoTextMedium"
+            android:layout_marginLeft="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="smsClick"
+            android:text="Phone: (815) 641-1587‬"/>
+        <TextView
+            android:id="@+id/email_TV"
+            style="@style/InfoTextMedium"
+            android:layout_marginLeft="20dp"
+            android:onClick="emailClick"
+            android:focusable="true"
+            android:clickable="true"
+            android:text="Email: strawberryshortcake@whatever.com‬"/>
+
+        <TextView
+            style="@style/InfoTextSmall"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:text="Bellus is an app you can use to book appointments for cosmetic services. To inquire about services and prices use the contact information above."/>
+
+    </LinearLayout>
+
+   </ScrollView>

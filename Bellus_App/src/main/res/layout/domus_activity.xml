@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/parentBackgroundColor"
-    tools:context="com.corp_awesome.bellus.domus">
+    tools:context="com.corp_awesome.bellus.Domus">
 
     <android.support.v7.widget.CardView
         style="@style/CardViewBase"
@@ -22,7 +22,7 @@
                 android:id="@+id/booking_IV"
                 android:layout_width="0dp"
                 android:layout_gravity="center"
-                android:layout_height="90dp"
+                android:layout_height="80dp"
                 android:layout_weight="65"
                 android:contentDescription="@string/booking_contentDescription"/>
 
@@ -82,7 +82,7 @@
             <ImageView
                 android:id="@+id/about_IV"
                 android:layout_width="0dp"
-                android:layout_height="90dp"
+                android:layout_height="80dp"
                 android:layout_gravity="center"
                 android:layout_weight="65"
                 android:contentDescription="@string/about_contentDescription"/>

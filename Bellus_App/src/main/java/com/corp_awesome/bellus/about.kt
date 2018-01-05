@@ -1,18 +1,22 @@
 package com.corp_awesome.bellus
 
 import android.content.Intent
+import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 
 /**
  *  Activity class that displays info about_img the services/service provider
  *
  */
 
-class about : AppCompatActivity(){
+class About : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,13 +24,39 @@ class about : AppCompatActivity(){
 
         supportActionBar?.title = resources.getString(R.string.about)
 
-        val phoneTV  : TextView= findViewById(R.id.phone_TV)
-        val emailTV : TextView = findViewById(R.id.email_TV)
-
-        phoneTV.isLongClickable = true
-        emailTV.isLongClickable = true
+        addPictures()
 
     }
+
+    override fun onStart(){
+        super.onStart()
+    }
+
+    private fun addPictures(){
+        val roseIV : ImageView = findViewById(R.id.roseIV)
+        val phoneIV  : ImageView= findViewById(R.id.phoneIV)
+        val emailIV : ImageView = findViewById(R.id.emailIV)
+        val instaIV : ImageView = findViewById(R.id.instaIV)
+        val fb : ImageView = findViewById(R.id.fbIV)
+
+        if (phoneIV.drawable == null && emailIV.drawable == null) {
+
+            val requestOptions = RequestOptions()
+            requestOptions.centerCrop()
+
+            phoneIV.isLongClickable = true
+            emailIV.isLongClickable = true
+
+            Glide.with(this).applyDefaultRequestOptions(requestOptions).load(R.drawable.about_rose_img).into(roseIV)
+            Glide.with(this).load(R.drawable.phone_icon).into(phoneIV)
+            Glide.with(this).load(R.drawable.email_icon).into(emailIV)
+            Glide.with(this).applyDefaultRequestOptions(requestOptions).load(R.drawable.ig_icon).into(instaIV)
+            Glide.with(this).load(R.drawable.fb_icon).into(fb)
+
+        }
+
+    }
+
 
     fun smsClick(v : View){
         val number = resources.getString(R.string.primary_phone_number)

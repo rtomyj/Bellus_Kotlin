@@ -10,6 +10,9 @@
     <string name="about_contentDescription">Picture for about button</string>
 
 
-    <string name="primary_email_address">strawberryshortcake@whatever.com</string>
-    <string name="primary_phone_number">815641158X‬</string>
+    <string name="primary_email_address">bellus.cosmetology@gmail.com</string>
+    <string name="primary_phone_number">8156411587‬</string>
+
+    <string name="inquire_sms">Inquire via sms…"</string>
+    <string name="inquire_email">Inquire via email…"</string>
 </resources>

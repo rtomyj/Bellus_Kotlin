@@ -35,7 +35,7 @@
                 android:id="@+id/phoneIV"
                 android:layout_marginRight="25dp"
                 android:layout_width="50dp"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:clickable="true"
                 android:focusable="true"
                 android:onClick="smsClick"
@@ -44,7 +44,7 @@
             <ImageView
                 android:id="@+id/emailIV"
                 android:layout_marginRight="25dp"
-                android:layout_width="60dp"
+                android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:clickable="true"
                 android:focusable="true"
@@ -55,21 +55,23 @@
             <ImageView
                 android:id="@+id/instaIV"
                 android:layout_marginRight="25dp"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:clickable="true"
                 android:focusable="true"
+                android:onClick="igClick"
                 android:scaleType="centerCrop"
                 />
 
 
             <ImageView
                 android:id="@+id/fbIV"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:scaleType="centerCrop"
                 android:clickable="true"
                 android:focusable="true"
+                android:onClick="fbClick"
                 android:adjustViewBounds="true"/>
 
         </LinearLayout>
@@ -77,10 +79,10 @@
 
         <TextView
             style="@style/InfoTextSmall"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:text="Bellus is an app you can use to book appointments for cosmetic services. To inquire about services and prices use the contact information above."/>
+            android:layout_marginTop="10dp"
+            android:text="Mother of a little girl and boy. I have been doing cosmetology for more than 5 years. I have worked in a popular cosmetics store for years, but come to realize that I love to make people beautiful. Doing cosmetology is more fun than selling cosmetics. I believe the face is a canvas and I happen to be a pretty darn good artist. \n\nIf you have any questions feel free to contact me using the buttons above."/>
 
     </LinearLayout>
 

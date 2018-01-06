@@ -12,7 +12,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
 /**
- *  Activity class that displays info about_img the services/service provider
+ *  Activity class that displays info about_icon the services/service provider
  *
  */
 
@@ -28,9 +28,6 @@ class About : AppCompatActivity(){
 
     }
 
-    override fun onStart(){
-        super.onStart()
-    }
 
     private fun addPictures(){
         val roseIV : ImageView = findViewById(R.id.roseIV)
@@ -48,7 +45,7 @@ class About : AppCompatActivity(){
             emailIV.isLongClickable = true
 
             Glide.with(this).applyDefaultRequestOptions(requestOptions).load(R.drawable.about_rose_img).into(roseIV)
-            Glide.with(this).load(R.drawable.phone_icon).into(phoneIV)
+            Glide.with(this).load(R.drawable.message_icon).into(phoneIV)
             Glide.with(this).load(R.drawable.email_icon).into(emailIV)
             Glide.with(this).applyDefaultRequestOptions(requestOptions).load(R.drawable.ig_icon).into(instaIV)
             Glide.with(this).load(R.drawable.fb_icon).into(fb)
@@ -62,7 +59,7 @@ class About : AppCompatActivity(){
         val number = resources.getString(R.string.primary_phone_number)
         val sms = Intent(Intent.ACTION_SENDTO, Uri.fromParts("sms", number , null))
 
-        startActivity(Intent.createChooser(sms, "Inquire email..."))
+        startActivity(Intent.createChooser(sms, resources.getString(R.string.inquire_sms)))
 
 
     }
@@ -71,7 +68,15 @@ class About : AppCompatActivity(){
         val address = resources.getString(R.string.primary_email_address)
         val email = Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", address , null))
 
-        startActivity(Intent.createChooser(email, "Inquire email..."))
+        startActivity(Intent.createChooser(email, resources.getString(R.string.inquire_email)))
+
+    }
+
+    fun igClick(v: View){
+
+    }
+
+    fun fbClick(v : View){
 
     }
 

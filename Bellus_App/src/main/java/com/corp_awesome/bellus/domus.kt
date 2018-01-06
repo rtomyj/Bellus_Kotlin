@@ -34,6 +34,7 @@ class Domus : AppCompatActivity() {
 
     private fun setImages(){
         val bookingIV : ImageView= findViewById(R.id.booking_IV)
+        val galleryIV : ImageView= findViewById(R.id.gallery_IV)
         val aboutIV: ImageView = findViewById(R.id.about_IV)
 
         if (bookingIV.drawable == null) {
@@ -46,11 +47,12 @@ class Domus : AppCompatActivity() {
             windowManager.defaultDisplay.getMetrics(metrics)
             var size = metrics.widthPixels
 
-            PictureMethods.setScaledBitmap(bookingIV, resources, R.drawable.booking_img,2 , size)
-            PictureMethods.setScaledBitmap(aboutIV, resources, R.drawable.about_img,2 , size)
+            PictureMethods.setScaledBitmap(bookingIV, resources, R.drawable.booking_icon,2 , size)
+            PictureMethods.setScaledBitmap(aboutIV, resources, R.drawable.about_icon,2 , size)
 */
-            Glide.with(this).applyDefaultRequestOptions(requestOptions).load(R.drawable.booking_img).into(bookingIV)
-            Glide.with(this).applyDefaultRequestOptions(requestOptions).load(R.drawable.about_img).into(aboutIV)
+            Glide.with(this).applyDefaultRequestOptions(requestOptions).load(R.drawable.booking_icon).into(bookingIV)
+            Glide.with(this).applyDefaultRequestOptions(requestOptions).load(R.drawable.gallery_icon).into(galleryIV)
+            Glide.with(this).applyDefaultRequestOptions(requestOptions).load(R.drawable.about_icon).into(aboutIV)
 
         }
 

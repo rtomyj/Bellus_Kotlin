@@ -23,6 +23,7 @@ class About : AppCompatActivity(){
         setContentView(R.layout.about_activity)
 
         supportActionBar?.title = resources.getString(R.string.about)
+        supportActionBar?.elevation = 0f
 
         addPictures()
 

@@ -16,6 +16,8 @@ class Domus : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.domus_activity)
 
+        supportActionBar?.elevation = 0f
+
 
     }
 

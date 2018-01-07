@@ -15,4 +15,9 @@
 
     <string name="inquire_sms">Inquire via sms…"</string>
     <string name="inquire_email">Inquire via email…"</string>
+
+    <array name="best_contact_array">
+        <item>sms</item>
+        <item>email</item>
+    </array>
 </resources>

@@ -70,14 +70,17 @@ class Domus : AppCompatActivity() {
     }
     fun bookAppointment(v : View){
 
+        val bookingIntent = Intent(this, Booking::class.java)
+        startActivity(bookingIntent)
+
     }
 
 
 
     fun about(v : View){
 
-        var intent = Intent(this, About::class.java)
-        startActivity(intent);
+        val aboutIntent = Intent(this, About::class.java)
+        startActivity(aboutIntent);
 
     }
 

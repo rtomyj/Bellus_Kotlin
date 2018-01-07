@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/parentBackgroundColor"
+              android:orientation="vertical"
+    >
+
+    <TextView
+        style="@style/LightHeaderText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/lightTextColor"
+        android:text="Personal Information"
+        android:gravity="left|center_vertical"
+        android:padding="5dp"
+
+        >
+
+
+
+    </TextView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            style="@style/InfoTextSmall"
+            android:textStyle="bold"
+            android:text="Name: "/>
+
+        <EditText
+            android:id="@+id/client_name"
+            style="@style/SingleLineEditText"
+            android:nextFocusDown="@id/client_number"
+            android:imeOptions="actionNext"
+            android:inputType="textPersonName"
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:layout_height="wrap_content"/>
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            style="@style/InfoTextSmall"
+            android:text="Phone Number: "/>
+
+        <EditText
+            android:id="@+id/client_number"
+            android:nextFocusUp="@id/client_name"
+            style="@style/SingleLineEditText"
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:imeOptions="actionNext"
+            android:nextFocusDown="@id/client_email"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            style="@style/InfoTextSmall"
+            android:textStyle="bold"
+            android:text="Email: "/>
+
+        <EditText
+            android:id="@+id/client_email"
+            android:nextFocusUp="@id/client_name"
+            style="@style/SingleLineEditText"
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:imeOptions="actionNext"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:layout_height="wrap_content"
+            style="@style/InfoTextSmall"
+            android:textStyle="bold"
+            android:text="Best Contact Information: "/>
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:entries="@array/best_contact_array"
+            android:layout_height="wrap_content">
+
+
+        </Spinner>
+
+    </LinearLayout>
+
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+
+    <TextView
+        style="@style/LightHeaderText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/lightTextColor"
+        android:text="Appointment Details"
+        android:gravity="left|center_vertical"
+        android:padding="5dp"
+
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            style="@style/InfoTextSmall"
+            android:textStyle="bold"
+            android:text="Number of People: "/>
+
+        <EditText
+            style="@style/SingleLineEditText"
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:layout_height="wrap_content"/>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

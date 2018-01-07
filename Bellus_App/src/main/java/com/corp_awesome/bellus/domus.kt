@@ -86,4 +86,10 @@ class Domus : AppCompatActivity() {
 
     }
 
+    fun gallery (v: View){
+        val galleryIntent = Intent(this, Gallery::class.java)
+        startActivity(galleryIntent)
+
+    }
+
 }

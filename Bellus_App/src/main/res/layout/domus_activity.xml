@@ -37,7 +37,8 @@
 
     </android.support.v7.widget.CardView>
     <android.support.v7.widget.CardView
-        style="@style/CardViewBase">
+        style="@style/CardViewBase"
+        android:onClick="gallery">
 
 
     <LinearLayout

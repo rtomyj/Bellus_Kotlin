@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/parentBackgroundColor"
+    android:layout_marginBottom="10dp"
     tools:context="com.corp_awesome.bellus.Domus">
 
     <android.support.v7.widget.CardView
@@ -23,7 +24,7 @@
                 android:layout_width="0dp"
                 android:layout_gravity="center"
                 android:layout_height="80dp"
-                android:layout_weight="65"
+                android:layout_weight="45"
                 android:contentDescription="@string/booking_contentDescription"/>
 
             <TextView
@@ -31,7 +32,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_weight="35"
+                android:layout_weight="55"
                 android:text="@string/book_appt"/>
         </LinearLayout>
 
@@ -51,7 +52,7 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="35"
+            android:layout_weight="55"
             android:layout_gravity="center"
             style="@style/LightHeaderText"
             android:text="@string/gallery"/>
@@ -61,7 +62,7 @@
             android:layout_width="0dp"
             android:layout_gravity="center"
             android:layout_height="80dp"
-            android:layout_weight="65"
+            android:layout_weight="45"
             android:contentDescription="@string/gallery_contentDescription"/>
 
     </LinearLayout>
@@ -86,7 +87,7 @@
                 android:layout_width="0dp"
                 android:layout_height="80dp"
                 android:layout_gravity="center"
-                android:layout_weight="65"
+                android:layout_weight="45"
                 android:contentDescription="@string/about_contentDescription"/>
 
 
@@ -94,7 +95,7 @@
                 android:layout_width="0dp"
                 android:layout_gravity="center"
                 android:layout_height="wrap_content"
-                android:layout_weight="35"
+                android:layout_weight="55"
                 style="@style/LightHeaderText"
                 android:text="@string/about"/>
 

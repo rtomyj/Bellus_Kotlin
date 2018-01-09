@@ -22,6 +22,7 @@ class Gallery : AppCompatActivity() {
 
     lateinit var frame : FrameLayout
     var init = false
+    var previewIsShown = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -68,12 +69,27 @@ class Gallery : AppCompatActivity() {
         img.startAnimation(animation1)
         fab.startAnimation(animation1)
 
+        previewIsShown = true
+
     }
 
     fun exitPreview(v : View){
-        frame.removeViewAt(1)
-        frame.getChildAt(0).isEnabled = true
+        exitPreview()
 
     }
 
+    fun exitPreview(){
+        frame.removeViewAt(1)
+        frame.getChildAt(0).isEnabled = true
+
+        previewIsShown = false
+
+    }
+
+    override fun onBackPressed() {
+        if (! previewIsShown)
+            super.onBackPressed()
+        else
+            exitPreview()
+    }
 }

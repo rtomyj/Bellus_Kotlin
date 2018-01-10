@@ -1,18 +1,18 @@
 package com.corp_awesome.bellus
 
+import android.media.Image
+import android.net.Uri
 import android.os.Bundle
 import android.support.design.widget.CoordinatorLayout
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.GridLayoutManager
+import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.ImageView
 import com.bumptech.glide.Glide
-import java.io.File
 import android.view.animation.AnimationUtils
-import android.view.animation.Animation
-
-
 
 
 /**
@@ -20,14 +20,34 @@ import android.view.animation.Animation
  */
 class Gallery : AppCompatActivity() {
 
-    lateinit var frame : FrameLayout
-    var init = false
-    var previewIsShown = false
+    private lateinit var frame : FrameLayout
+    private var init = false
+    private var previewIsShown = false
+
+    private lateinit var galleryRV : RecyclerView
+    private lateinit var galleryAdapter: GalleryAdapter
+
+    private val absoluteAssetPath = "file:///android_asset/"
+    private var picList: ArrayList<String> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.gallery_activity)
+
+        galleryRV = findViewById(R.id.gallery_RV)
+        var galleryRVManager = GridLayoutManager(this, 2)
+        galleryRV.layoutManager = galleryRVManager
+
+
+
+        val list = assets.list("")
+
+        list.filterTo(picList) { it.contains(".png") }
+
+        galleryAdapter = GalleryAdapter(picList, this)
+        galleryRV.adapter = galleryAdapter
+
 
 
     }
@@ -40,36 +60,29 @@ class Gallery : AppCompatActivity() {
             init = true
         }
 
-        var file = File(filesDir, "")
-        var list = file.listFiles()
-
-        for (item : File in list)
-            System.out.println(item.name)
-           // System.out.println(file.absolutePath + " " + file.exists())
-
     }
 
-    fun showPreview(v : View){
-        val previewParent : CoordinatorLayout= LayoutInflater.from(this).inflate(R.layout.gallery_preview, null) as CoordinatorLayout
-        val img  = previewParent.findViewById<ImageView>(R.id.preview_iv)
-        val fab  = previewParent.findViewById<ImageView>(R.id.fab)
+    fun showPreview(position : Int){
+        if (!previewIsShown) {
+            previewIsShown = true
 
-        previewParent.visibility =View.INVISIBLE
+            val previewParent: CoordinatorLayout = LayoutInflater.from(this).inflate(R.layout.gallery_preview, null) as CoordinatorLayout
+            val img = previewParent.findViewById<ImageView>(R.id.preview_iv)
+            val fab = previewParent.findViewById<ImageView>(R.id.fab)
 
-        Glide.with(this).load(R.drawable.gallery_p_4).into(img)
+            Glide.with(this).load(Uri.parse(absoluteAssetPath + picList[position])).into(img)
 
-        frame.addView(previewParent)
-        frame.getChildAt(0).isEnabled = false
+            frame.addView(previewParent)
+            galleryRV.isEnabled = false
 
+            val animation1 = AnimationUtils.loadAnimation(applicationContext,
+                    R.anim.pop_up)
+            val animation2 = AnimationUtils.loadAnimation(applicationContext, R.anim.pop_up_delay)
 
-        previewParent.visibility =View.VISIBLE
-
-        val animation1 = AnimationUtils.loadAnimation(applicationContext,
-                R.anim.pop_up)
-        img.startAnimation(animation1)
-        fab.startAnimation(animation1)
-
-        previewIsShown = true
+            previewParent.startAnimation(animation1)
+            img.startAnimation(animation1)
+            fab.startAnimation(animation2)
+        }
 
     }
 
@@ -78,8 +91,13 @@ class Gallery : AppCompatActivity() {
 
     }
 
-    fun exitPreview(){
+    private fun exitPreview(){
+        var img = frame.getChildAt(1).findViewById<ImageView>(R.id.preview_iv)
+
+        Glide.with(this).clear(img)
+
         frame.removeViewAt(1)
+
         frame.getChildAt(0).isEnabled = true
 
         previewIsShown = false

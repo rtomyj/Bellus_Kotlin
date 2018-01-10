@@ -35,6 +35,7 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:onClick="smsClick"
+                android:tooltipText="Send Text Message"
                 android:adjustViewBounds="true"/>
 
             <ImageView

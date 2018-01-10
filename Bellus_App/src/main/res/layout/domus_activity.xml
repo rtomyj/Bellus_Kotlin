@@ -13,27 +13,43 @@
         style="@style/CardViewBase"
         android:onClick="bookAppointment"
         >
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/greenBackground"
             android:orientation="horizontal">
-            
+
             <ImageView
                 android:id="@+id/booking_IV"
                 android:layout_width="0dp"
-                android:layout_gravity="center"
                 android:layout_height="80dp"
+                android:layout_gravity="center"
                 android:layout_weight="45"
                 android:contentDescription="@string/booking_contentDescription"/>
-
-            <TextView
-                style="@style/LightHeaderText"
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
                 android:layout_weight="55"
-                android:text="@string/book_appt"/>
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/LightHeaderText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/book_appt"/>
+                <TextView
+                    style="@style/LightSubHeaderText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Schedule a visit"
+                    />
+
+
+            </LinearLayout>
+
         </LinearLayout>
 
     </android.support.v7.widget.CardView>
@@ -49,13 +65,29 @@
         android:orientation="horizontal">
 
 
-        <TextView
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="55"
             android:layout_gravity="center"
-            style="@style/LightHeaderText"
-            android:text="@string/gallery"/>
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/LightHeaderText"
+                android:text="@string/gallery"/>
+
+            <TextView
+                style="@style/LightSubHeaderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="View previous girls"
+                />
+
+        </LinearLayout>
 
         <ImageView
             android:id="@+id/gallery_IV"
@@ -91,13 +123,30 @@
                 android:contentDescription="@string/about_contentDescription"/>
 
 
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="55"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
             <TextView
-                android:layout_width="0dp"
-                android:layout_gravity="center"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="55"
                 style="@style/LightHeaderText"
                 android:text="@string/about"/>
+
+            <TextView
+                style="@style/LightSubHeaderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Find out more about Bellus"
+                />
+
+        </LinearLayout>
+
 
         </LinearLayout>
     </android.support.v7.widget.CardView>

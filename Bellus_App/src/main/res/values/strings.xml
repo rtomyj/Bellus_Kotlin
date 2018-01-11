@@ -17,7 +17,20 @@
     <string name="inquire_email">Inquire via email…"</string>
 
     <array name="best_contact_array">
+        <item>preferred contact</item>
         <item>sms</item>
         <item>email</item>
     </array>
+
+    <array name="group_type_array">
+        <item>group size</item>
+        <item>single person</item>
+        <item>group</item>
+        <item>wedding</item>
+    </array>
+
+    <array name="group_size_array">
+        <item>1</item>
+    </array>
+
 </resources>

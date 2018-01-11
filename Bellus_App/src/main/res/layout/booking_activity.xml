@@ -33,6 +33,7 @@
             android:inputType="textPersonName"
             android:layout_weight="1"
             android:hint="name"
+            android:maxLines="1"
             />
 
         <EditText
@@ -51,6 +52,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:weightSum="2"
         android:layout_marginLeft="15dp"
         android:gravity="center_vertical"
         android:orientation="horizontal">
@@ -59,14 +61,14 @@
             android:id="@+id/client_email"
             android:nextFocusUp="@id/client_name"
             style="@style/SingleLineEditText"
-            android:layout_weight="6"
+            android:layout_weight="1"
             android:imeOptions="actionNext"
             android:hint="email"
             />
 
-        <Spinner
+        <android.support.v7.widget.AppCompatSpinner
             android:layout_width="0dp"
-            android:layout_weight="4"
+            android:layout_weight="1"
             android:entries="@array/best_contact_array"
             android:layout_height="wrap_content"
             />
@@ -101,12 +103,18 @@
         android:orientation="horizontal">
 
 
-        <EditText
-            style="@style/SingleLineEditText"
-            android:layout_weight="7"
-            android:hint="number of people"
+        <android.support.v7.widget.AppCompatSpinner
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:layout_height="wrap_content"
+            android:entries="@array/group_type_array"
             />
 
+        <android.support.v7.widget.AppCompatSpinner
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            />
 
 
 

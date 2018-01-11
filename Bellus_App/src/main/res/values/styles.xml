@@ -63,6 +63,7 @@
     </style>
 
     <style name="SingleLineEditText" parent="InfoTextSmall">
+        <item name="android:layout_width">0dp</item>
         <item name="android:minLines">1</item>
         <item name="android:maxLines">1</item>
         <item name="android:padding">10dp</item>

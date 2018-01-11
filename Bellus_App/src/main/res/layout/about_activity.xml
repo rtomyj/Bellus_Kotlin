@@ -11,7 +11,10 @@
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:adjustViewBounds="true"
-            android:baseline="@dimen/cardview_default_elevation"/>
+            android:scaleType="center"
+
+
+            />
 
         <TextView
             style="@style/InfoTextBig"
@@ -88,7 +91,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="10dp"
-                android:text="Mother of a little girl and boy. I have been doing cosmetology for more than 5 years. I have worked in a popular cosmetics store for years, but come to realize that I love to make people beautiful. Doing cosmetology is more fun than selling cosmetics. I believe the face is a canvas and I happen to be a pretty darn good artist. \n\nIf you have any questions feel free to contact me using the buttons above."/>
+                android:text="Mother of a little girl and boy. I have been doing cosmetology for more than 8 years. I have worked in a popular cosmetics store for years, but come to realize that I love to make people beautiful. Doing cosmetology is more fun than selling cosmetics. I believe the face is a canvas and I happen to be a pretty darn good artist. \n\nIf you have any questions feel free to contact me using the buttons above."/>
 
 
         </LinearLayout>

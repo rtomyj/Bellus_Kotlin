@@ -1,13 +1,11 @@
 package com.corp_awesome.bellus
 
 import android.content.Intent
-import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.ImageView
-import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
@@ -40,10 +38,6 @@ class About : AppCompatActivity(){
         if (phoneIV.drawable == null && emailIV.drawable == null) {
 
             val requestOptions = RequestOptions()
-            requestOptions.centerCrop()
-
-            phoneIV.isLongClickable = true
-            emailIV.isLongClickable = true
 
             Glide.with(this).applyDefaultRequestOptions(requestOptions).load(R.drawable.about_rose_img).into(roseIV)
             Glide.with(this).load(R.drawable.message_icon).into(phoneIV)

@@ -39,10 +39,6 @@ class About : AppCompatActivity(){
         if (phoneIV.drawable == null && emailIV.drawable == null) {
 
             val requestOptions = RequestOptions()
-            requestOptions.centerCrop()
-
-            phoneIV.isLongClickable = true
-            emailIV.isLongClickable = true
 
             Glide.with(this).applyDefaultRequestOptions(requestOptions).load(R.drawable.about_rose_img).into(roseIV)
             Glide.with(this).load(R.drawable.message_icon).into(phoneIV)

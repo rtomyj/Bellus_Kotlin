@@ -36,11 +36,6 @@ class Domus : AppCompatActivity() {
 
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-
-     //  recycleImages()
-    }
 
     private fun setImages(){
         val bookingIV : ImageView= findViewById(R.id.booking_IV)

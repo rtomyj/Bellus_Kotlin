@@ -3,8 +3,15 @@ package com.corp_awesome.bellus
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 
+
 /**
- * Created by MacMini on 1/6/18.
+ *
+ */
+
+/*
+    TODO
+    Type of appointments - group appointments, one on one, wedding
+
  */
 class Booking : AppCompatActivity(){
 
@@ -18,4 +25,5 @@ class Booking : AppCompatActivity(){
 
 
     }
+
 }

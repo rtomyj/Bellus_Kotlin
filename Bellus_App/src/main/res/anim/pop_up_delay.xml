@@ -6,8 +6,8 @@
            android:toXScale="1"
            android:fromYScale="0.0"
            android:toYScale="1"
-           android:duration="200"
-           android:startOffset="700"
+           android:duration="300"
+           android:startOffset="800"
 
         >
     </scale>

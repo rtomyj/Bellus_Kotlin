@@ -10,19 +10,6 @@
     </style>
 
 
-    <style name="LightHeaderText">
-        <item name="android:textSize">21sp</item>
-        <item name="android:textColor">@color/lightTextColor</item>
-        <item name="android:gravity">center</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
-    </style>
-    <style name="LightSubHeaderText" parent="LightHeaderText">
-        <item name="android:textSize">17sp</item>
-        <item name="android:gravity">left|center_vertical</item>
-        <item name="android:padding">5dp</item>
-        <item name="android:fontFamily">sans-serif</item>
-    </style>
-
     <style name="CardViewBase" parent="CardView">
         <item name="android:layout_marginTop">10dp</item>
         <item name="android:layout_marginRight">8dp</item>
@@ -35,39 +22,29 @@
         <item name="cardCornerRadius">5dp</item>
     </style>
 
-    <style name="InfoTextBig" >
-    <item name="android:textSize">34sp</item>
-    <item name="android:textColor">@color/header1TextColor</item>
-    <item name="android:layout_width">wrap_content</item>
-    <item name="android:layout_height">wrap_content</item>
-        <item name="android:fontFamily">sans-serif</item>
 
-</style>
 
-    <style name="InfoTextMedium" >
-    <item name="android:textSize">21sp</item>
-    <item name="android:textColor">@color/header2TextColor</item>
-    <item name="android:layout_width">wrap_content</item>
-    <item name="android:layout_height">wrap_content</item>
-    <item name="android:fontFamily">sans-serif-medium</item>
+    <style name="SmallIcon">
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">50dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:layout_marginRight">20dp</item>
+    </style>
 
-</style>
-
-    <style name="InfoTextSmall" >
-        <item name="android:textSize">15sp</item>
-        <item name="android:textColor">@color/header3TextColor</item>
-        <item name="android:layout_width">wrap_content</item>
+    <style name="PurpleButton">
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_width">150dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:fontFamily">sans-serif</item>
-
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:textColor">@color/lightTextColor</item>
     </style>
 
-    <style name="SingleLineEditText" parent="InfoTextSmall">
-        <item name="android:minLines">1</item>
-        <item name="android:maxLines">1</item>
-        <item name="android:padding">10dp</item>
-        <item name="android:background">@color/parentBackgroundColor</item>
-    </style>
+
 
 
 </resources>

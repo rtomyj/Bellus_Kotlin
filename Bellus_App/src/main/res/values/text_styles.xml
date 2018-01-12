@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+        All styles that effect text of a TextView or EditText
+-->
+<resources>
+
+    <style name="LightHeaderText" >
+        <item name="android:textSize">21sp</item>
+        <item name="android:textColor">@color/lightTextColor</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+
+    <style name="LightSubHeaderText" parent="LightHeaderText">
+        <item name="android:textSize">17sp</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+
+    <style name="LightBodyText" parent="LightHeaderText">
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+
+    <style name="InfoTextBig" >
+        <item name="android:textSize">34sp</item>
+        <item name="android:textColor">@color/header1TextColor</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif</item>
+
+    </style>
+
+    <style name="InfoTextMedium" >
+        <item name="android:textSize">21sp</item>
+        <item name="android:textColor">@color/header2TextColor</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+
+    </style>
+
+    <style name="InfoTextSmall" >
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/header3TextColor</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif</item>
+
+    </style>
+
+
+    <style name="AlertDialogHeaderText" parent="InfoTextBig">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+
+    </style>
+
+
+    <style name="SingleLineEditText" parent="InfoTextSmall">
+        <item name="android:minLines">1</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:background">@color/parentBackgroundColor</item>
+    </style>
+</resources>

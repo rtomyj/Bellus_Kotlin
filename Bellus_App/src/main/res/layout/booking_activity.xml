@@ -2,114 +2,138 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="@color/parentBackgroundColor"
               android:orientation="vertical"
+              android:background="#f6f6f6"
     >
-
-    <TextView
-        style="@style/LightSubHeaderText"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/parentBackgroundColor"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:elevation="5dp"
-        android:background="@color/colorPrimary"
-        android:text="Personal Information"
-        >
+        android:orientation="vertical">
 
-    </TextView>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="5dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
-
-
-        <EditText
-            android:id="@+id/client_name"
-            style="@style/SingleLineEditText"
-            android:nextFocusDown="@id/client_number"
-            android:imeOptions="actionNext"
-            android:inputType="textPersonName"
-            android:layout_weight="1"
-            android:hint="name"
-            />
-
-        <EditText
-            android:id="@+id/client_number"
-            android:nextFocusUp="@id/client_name"
-            style="@style/SingleLineEditText"
-            android:layout_weight="1"
-            android:imeOptions="actionNext"
-            android:nextFocusDown="@id/client_email"
-            android:hint="phone number"
-            />
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/client_email"
-            android:nextFocusUp="@id/client_name"
-            style="@style/SingleLineEditText"
-            android:layout_weight="6"
-            android:imeOptions="actionNext"
-            android:hint="email"
-            />
-
-        <Spinner
-            android:layout_width="0dp"
-            android:layout_weight="4"
-            android:entries="@array/best_contact_array"
+        <TextView
+            style="@style/LightSubHeaderText"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Personal Information"
+            >
+
+        </TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/client_name"
+                style="@style/SingleLineEditText"
+                android:nextFocusDown="@id/client_number"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:hint="name"
+                />
+
+            <EditText
+                android:id="@+id/client_number"
+                android:nextFocusUp="@id/client_name"
+                style="@style/SingleLineEditText"
+                android:layout_weight="1"
+                android:imeOptions="actionNext"
+                android:nextFocusDown="@id/client_email"
+                android:hint="phone number"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/client_email"
+                android:nextFocusUp="@id/client_name"
+                style="@style/SingleLineEditText"
+                android:layout_weight="6"
+                android:imeOptions="actionNext"
+                android:hint="email"
+                />
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:entries="@array/best_contact_array"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+
+
+
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+
+
+        <TextView
+            style="@style/LightSubHeaderText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Appointment Details"
+
             />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <EditText
+                style="@style/SingleLineEditText"
+                android:layout_weight="7"
+                android:hint="number of people"
+                />
+
+
+
+
+        </LinearLayout>
+
     </LinearLayout>
-
-
-
-
-    <android.support.v4.widget.Space
-        android:layout_width="match_parent"
-        android:layout_height="15dp"/>
-
-
-    <TextView
-        style="@style/LightSubHeaderText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:elevation="5dp"
-        android:background="@color/colorPrimary"
-        android:text="Appointment Details"
-
-        />
-
-
 
     <LinearLayout
+        android:background="@color/parentBackgroundColor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="5dp"
-        android:gravity="center_vertical"
+        android:elevation="24dp"
         android:orientation="horizontal">
 
-
-        <EditText
-            style="@style/SingleLineEditText"
-            android:layout_weight="7"
-            android:hint="number of people"
-            />
-
-
-
-
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test"/>
     </LinearLayout>
+
+
 
 </LinearLayout>

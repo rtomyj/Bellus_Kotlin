@@ -20,4 +20,18 @@
         <item>sms</item>
         <item>email</item>
     </array>
+
+    <string name="about_rose">Mother of a little girl and boy. I have been doing cosmetology for more than 8 years. I have worked in a popular cosmetics store for years, but come to realize that I love to make people beautiful. Doing cosmetology is more fun than selling cosmetics. I believe the face is a canvas and I happen to be a pretty darn good artist. \n\nIf you have any questions feel free to contact me through sms, email or social media.</string>
+
+    <string name="policy_booking">Booking</string>
+    <string name="policy_booking_content">When you submit a booking request I will check to see If I am available. If I am and I believe I am able to do the look you described I will respond saying so. Along with my response, I will email information about payment. If you agree then my time will be yours for the specified duration.</string>
+
+    <string name="policy_downPayment">Down Payment</string>
+    <string name="policy_downPayment_content">Once I agree to a booking request a down payment of half the total will be needed to secure the appointment. Security deposit ensures you get me at a desired time and helps filter serious clients. Down payment is non-refundable with no exceptions other than those listed (see: Cancellation).</string>
+
+    <string name="policy_clientResponsibility">Client Responsibility</string>
+    <string name="policy_clientResponsibility_content">Be absolutely sure the time you choose matches the schedules of everyone in your party. I am not responsible for the people in your party. Make sure everyone is there on time. If I have to leave because time expires and your party didn\'t receive everything we agreed upon, it is not my fault. If I don't have other appointments I might stay to finish those who shows up late, however, a fee of $20 per 15 min (rounded up) will be issued. These fees will be collected when the appointment is over.</string>
+
+    <string name="policy_cancellations">Cancellations</string>
+    <string name="policy_cancellations_content">You have the right to cancel at any time with the consequence of losing the time slot as well as the security deposit. If cancellation occurs on my end due to illness, accident, weather, etc - a full refund will be issued. If I deem a circumstance on your end is grounds for a refund of the down payment, I will issue it.</string>
 </resources>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/parentBackgroundColor"
+    >
+    <TextView
+        android:id="@+id/welcomeTV"
+        style="@style/InfoTextMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Before We Get Started -\nA Few Things"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/colorPrimaryDark"
+        />
+
+
+    <TextView
+        style="@style/AlertDialogHeaderText"
+        android:text="Policies"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                style="@style/InfoTextMedium"
+                android:text="@string/policy_booking"
+                />
+
+            <TextView
+                style="@style/InfoTextSmall"
+                android:text="@string/policy_booking_content"
+
+                />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="15dp"/>
+
+            <TextView
+                style="@style/InfoTextMedium"
+                android:text="@string/policy_downPayment"
+                />
+
+            <TextView
+                style="@style/InfoTextSmall"
+                android:text="@string/policy_downPayment_content"
+
+                />
+
+            <Space
+            android:layout_width="0dp"
+            android:layout_height="15dp"/>
+
+            <TextView
+                style="@style/InfoTextMedium"
+                android:text="@string/policy_clientResponsibility"
+                />
+
+            <TextView
+                style="@style/InfoTextSmall"
+                android:text="@string/policy_clientResponsibility_content"
+
+                />
+
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="15dp"/>
+
+            <TextView
+                style="@style/InfoTextMedium"
+                android:text="@string/policy_cancellations"
+                />
+
+            <TextView
+                style="@style/InfoTextSmall"
+                android:text="@string/policy_cancellations_content"
+
+                />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

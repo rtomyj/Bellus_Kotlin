@@ -44,7 +44,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Schedule a visit"
+                    android:text="Reserve time slot"
                     />
 
 
@@ -84,7 +84,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="View previous girls"
+                android:text="View examples of previous work"
                 />
 
         </LinearLayout>
@@ -142,7 +142,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Find out more about Bellus"
+                android:text="Policies and information about the artist"
                 />
 
         </LinearLayout>

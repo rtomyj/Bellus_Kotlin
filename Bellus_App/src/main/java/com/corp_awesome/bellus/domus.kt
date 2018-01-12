@@ -3,12 +3,12 @@ package com.corp_awesome.bellus
 import android.content.Intent
 import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.ImageView
-import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.Glide
-
+import com.bumptech.glide.request.RequestOptions
 
 class Domus : AppCompatActivity() {
 
@@ -18,6 +18,14 @@ class Domus : AppCompatActivity() {
 
         supportActionBar?.elevation = 0f
 
+        val preferences = PreferenceManager.getDefaultSharedPreferences(this)
+        if ( ! preferences.getBoolean(Preferences.SHOWED_POLICIES_ON_FIRST_LAUNCH.toString(), false)){
+            val policyDialog = Popups.policyAlertDialog(this, true)
+
+            policyDialog.create().show()
+            preferences.edit().putBoolean(Preferences.SHOWED_POLICIES_ON_FIRST_LAUNCH.toString(), true).apply()
+
+        }
 
     }
 
@@ -91,5 +99,6 @@ class Domus : AppCompatActivity() {
         startActivity(galleryIntent)
 
     }
+
 
 }

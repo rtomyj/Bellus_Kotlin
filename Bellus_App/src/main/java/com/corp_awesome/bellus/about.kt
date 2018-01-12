@@ -1,13 +1,12 @@
 package com.corp_awesome.bellus
 
 import android.content.Intent
-import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
 import android.os.Bundle
+import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.ImageView
-import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
@@ -79,6 +78,16 @@ class About : AppCompatActivity(){
 
     fun fbClick(v : View){
 
+    }
+
+    fun showBookingPolicy(v :View){
+        Popups.policyAlertDialog(this, false).create().show()
+
+
+    }
+
+    fun showAboutRose(v :View){
+        Popups.roseAlertDialog(this).create().show()
     }
 
 }

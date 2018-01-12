@@ -9,7 +9,7 @@
         <ImageView
             android:id="@+id/roseIV"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="280dp"
             android:adjustViewBounds="true"
             android:baseline="@dimen/cardview_default_elevation"/>
 
@@ -28,48 +28,34 @@
             android:orientation="horizontal">
 
             <ImageView
+                style="@style/SmallIcon"
                 android:id="@+id/phoneIV"
-                android:layout_marginRight="25dp"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:clickable="true"
-                android:focusable="true"
                 android:onClick="smsClick"
-                android:tooltipText="Send Text Message"
-                android:adjustViewBounds="true"/>
+                />
 
             <ImageView
+                style="@style/SmallIcon"
                 android:id="@+id/emailIV"
-                android:layout_marginRight="25dp"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="emailClick"
-                android:adjustViewBounds="true"/>
+                android:onClick="emailClick"/>
 
 
             <ImageView
+                style="@style/SmallIcon"
                 android:id="@+id/instaIV"
-                android:layout_marginRight="25dp"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:clickable="true"
-                android:focusable="true"
                 android:onClick="igClick"
                 android:scaleType="centerCrop"
                 />
 
 
             <ImageView
+                style="@style/SmallIcon"
                 android:id="@+id/fbIV"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:scaleType="centerCrop"
-                android:clickable="true"
-                android:focusable="true"
+                android:layout_marginRight="0dp"
                 android:onClick="fbClick"
-                android:adjustViewBounds="true"/>
+                />
 
         </LinearLayout>
 
@@ -79,16 +65,25 @@
         android:layout_height="wrap_content"
         xmlns:android="http://schemas.android.com/apk/res/android">
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
 
             <TextView
                 style="@style/InfoTextSmall"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginTop="10dp"
-                android:text="Mother of a little girl and boy. I have been doing cosmetology for more than 5 years. I have worked in a popular cosmetics store for years, but come to realize that I love to make people beautiful. Doing cosmetology is more fun than selling cosmetics. I believe the face is a canvas and I happen to be a pretty darn good artist. \n\nIf you have any questions feel free to contact me using the buttons above."/>
+                android:text=""/>
+
+            <Button
+                style="@style/PurpleButton"
+                android:text="About Rose"
+                android:onClick="showAboutRose"/>
+            <Button
+                style="@style/PurpleButton"
+                android:text="Policies"
+                android:onClick="showBookingPolicy"/>
 
 
         </LinearLayout>

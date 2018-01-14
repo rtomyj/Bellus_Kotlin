@@ -20,7 +20,6 @@ class Booking : AppCompatActivity(){
 
         setContentView(R.layout.booking_activity)
 
-        supportActionBar?.title = resources.getString(R.string.book_appt)
         supportActionBar?.elevation = 0F
 
 

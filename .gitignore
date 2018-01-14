@@ -53,3 +53,8 @@ google-services.json
 freeline.py
 freeline/
 freeline_project_description.json
+.idea/
+Bellus_App/.idea/
+Bellus_App/gradle/
+Bellus_App/gradlew
+Bellus_App/gradlew.bat

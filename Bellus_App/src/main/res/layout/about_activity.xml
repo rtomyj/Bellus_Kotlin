@@ -1,102 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                   android:layout_width="match_parent"
                   android:layout_height="match_parent"
-                  android:background="@color/parentBackgroundColor"
+                  android:background="#eee"
                   android:orientation="vertical">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="280dp">
+
 
         <ImageView
             android:id="@+id/roseIV"
             android:layout_width="match_parent"
-            android:layout_height="280dp"
+            android:layout_height="match_parent"
             android:adjustViewBounds="true"
             android:scaleType="center"
-
-
+            android:elevation="8dp"
             />
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/parentBackgroundColor"
+        android:orientation="vertical"
+        android:elevation="8dp"
+        >
 
         <TextView
             style="@style/InfoTextBig"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
             android:text="Rose Gomez"/>
-        <LinearLayout
-            android:layout_marginTop="5dp"
-            android:layout_width="match_parent"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:gravity="center"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                style="@style/SmallIcon"
-                android:id="@+id/phoneIV"
-                android:onClick="smsClick"
-                />
-
-            <ImageView
-                style="@style/SmallIcon"
-                android:id="@+id/emailIV"
-                android:onClick="emailClick"/>
 
 
-            <ImageView
-                style="@style/SmallIcon"
-                android:id="@+id/instaIV"
-                android:onClick="igClick"
-                android:scaleType="centerCrop"
-                />
-
-
-            <ImageView
-                style="@style/SmallIcon"
-                android:id="@+id/fbIV"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:scaleType="centerCrop"
-                android:layout_marginRight="0dp"
-                android:onClick="fbClick"
-                />
-
-        </LinearLayout>
-
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        xmlns:android="http://schemas.android.com/apk/res/android">
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            xmlns:android="http://schemas.android.com/apk/res/android">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
 
-            <TextView
-                style="@style/InfoTextSmall"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-<<<<<<< HEAD
-                android:text=""/>
 
-            <Button
-                style="@style/PurpleButton"
-                android:text="About Rose"
-                android:onClick="showAboutRose"/>
-            <Button
-                style="@style/PurpleButton"
-                android:text="Policies"
-                android:onClick="showBookingPolicy"/>
-=======
-                android:layout_marginTop="10dp"
-                android:text="Mother of a little girl and boy. I have been doing cosmetology for more than 8 years. I have worked in a popular cosmetics store for years, but come to realize that I love to make people beautiful. Doing cosmetology is more fun than selling cosmetics. I believe the face is a canvas and I happen to be a pretty darn good artist. \n\nIf you have any questions feel free to contact me using the buttons above."/>
->>>>>>> 938de7a297806ffb800bc71a99e6d3fb270a51b1
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/SmallIcon"
+                        android:id="@+id/phoneIV"
+                        android:onClick="smsClick"
+                        />
+
+                    <ImageView
+                        style="@style/SmallIcon"
+                        android:id="@+id/emailIV"
+                        android:onClick="emailClick"/>
 
 
-        </LinearLayout>
+                    <ImageView
+                        style="@style/SmallIcon"
+                        android:id="@+id/instaIV"
+                        android:onClick="igClick"
+                        android:scaleType="centerCrop"
+                        />
 
-    </ScrollView>
+
+                    <ImageView
+                        style="@style/SmallIcon"
+                        android:id="@+id/fbIV"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:scaleType="centerCrop"
+                        android:layout_marginRight="0dp"
+                        android:onClick="fbClick"
+                        />
+
+                </LinearLayout>
+
+
+                <TextView
+                    style="@style/InfoTextSmall"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text=""/>
+
+                <Button
+                    style="@style/PurpleButton"
+                    android:text="About Me"
+                    android:onClick="showAboutRose"/>
+                <Button
+                    style="@style/PurpleButton"
+                    android:text="Policies"
+                    android:onClick="showBookingPolicy"/>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
 
     </LinearLayout>
 

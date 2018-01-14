@@ -2,32 +2,36 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:orientation="vertical"
               android:background="#f6f6f6"
+              android:orientation="vertical"
     >
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@color/parentBackgroundColor"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:background="@color/parentBackgroundColor"
+        android:baselineAligned="false"
         android:elevation="5dp"
         android:orientation="vertical">
 
         <TextView
-            style="@style/LightSubHeaderText"
+            style="@style/InfoTextMedium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
             android:text="Personal Information"
-            >
+            android:layout_margin="5dp"
+            />
 
-        </TextView>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
@@ -36,21 +40,24 @@
             <EditText
                 android:id="@+id/client_name"
                 style="@style/SingleLineEditText"
-                android:nextFocusDown="@id/client_number"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:hint="name*"
                 android:imeOptions="actionNext"
                 android:inputType="textPersonName"
-                android:layout_weight="1"
-                android:hint="name"
+                android:nextFocusDown="@id/client_number"
                 />
 
             <EditText
                 android:id="@+id/client_number"
-                android:nextFocusUp="@id/client_name"
                 style="@style/SingleLineEditText"
+                android:layout_width="0dp"
                 android:layout_weight="1"
+                android:hint="phone number*"
                 android:imeOptions="actionNext"
+                android:inputType="phone"
                 android:nextFocusDown="@id/client_email"
-                android:hint="phone number"
+                android:nextFocusUp="@id/client_name"
                 />
 
         </LinearLayout>
@@ -59,135 +66,170 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-<<<<<<< HEAD
             <EditText
                 android:id="@+id/client_email"
-                android:nextFocusUp="@id/client_name"
                 style="@style/SingleLineEditText"
-                android:layout_weight="6"
-                android:imeOptions="actionNext"
-                android:hint="email"
-                />
-=======
-        <EditText
-            android:id="@+id/client_name"
-            style="@style/SingleLineEditText"
-            android:nextFocusDown="@id/client_number"
-            android:imeOptions="actionNext"
-            android:inputType="textPersonName"
-            android:layout_weight="1"
-            android:hint="name"
-            android:maxLines="1"
-            />
->>>>>>> 938de7a297806ffb800bc71a99e6d3fb270a51b1
-
-            <Spinner
                 android:layout_width="0dp"
-                android:layout_weight="4"
-                android:entries="@array/best_contact_array"
-                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:hint="email*"
+                android:inputType="textEmailAddress"
+                android:imeOptions="actionNext"
+                android:nextFocusUp="@id/client_name"
                 />
+
+
         </LinearLayout>
-
-
-
-<<<<<<< HEAD
-
-        <android.support.v4.widget.Space
-            android:layout_width="match_parent"
-            android:layout_height="15dp"/>
 
 
         <TextView
-            style="@style/LightSubHeaderText"
+            style="@style/InfoTextMedium"
             android:layout_width="match_parent"
-=======
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="2"
-        android:layout_marginLeft="15dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/client_email"
-            android:nextFocusUp="@id/client_name"
-            style="@style/SingleLineEditText"
-            android:layout_weight="1"
-            android:imeOptions="actionNext"
-            android:hint="email"
-            />
-
-        <android.support.v7.widget.AppCompatSpinner
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:entries="@array/best_contact_array"
->>>>>>> 938de7a297806ffb800bc71a99e6d3fb270a51b1
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:text="Appointment Details"
-
+            android:text="Appointment Information"
+            android:layout_margin="5dp"
             />
-
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="5dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                >
+
+                <TextView
+                    style="@style/InfoTextSmall"
+                    android:layout_marginRight="5dp"
+                    android:textColor="#555"
+                    android:text="Package:"/>
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/group_type_array"
+                    />
+
+            </LinearLayout>
 
 
-            <EditText
-                style="@style/SingleLineEditText"
-                android:layout_weight="7"
-                android:hint="number of people"
-                />
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                >
+
+                <TextView
+                    style="@style/InfoTextSmall"
+                    android:layout_marginRight="5dp"
+                    android:textColor="#555"
+                    android:text="Group Size:"/>
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
 
 
 
 
         </LinearLayout>
 
-    </LinearLayout>
 
     <LinearLayout
-        android:background="@color/parentBackgroundColor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:elevation="24dp"
+        android:padding="10dp"
         android:orientation="horizontal">
 
-<<<<<<< HEAD
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:textColor="#555"
+            android:gravity="center"
+            android:text="Appointment\nAddress:"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <EditText
+                style="@style/SingleLineEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="street address"
+                />
+
+                <EditText
+                    style="@style/SingleLineEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="zip"
+                    />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+        <EditText
+            style="@style/SingleLineEditText"
+            android:layout_width="match_parent"
+            android:minLines="2"
+            android:maxLines="6"
+            android:hint="describe look, paste links, etc - will only do make-up no hair/nails/etc"
+            android:gravity="top"
+            />
+
+    </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:elevation="24dp"
+        android:orientation="vertical">
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="test"/>
+            android:text="* Required fields"
+            android:textColor="#555"
+            android:textSize="12sp"/>
+
+        <TextView
+            style="@style/InfoTextBig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$100.00"
+            android:textColor="@color/greenBackground"
+            android:layout_margin="5dp"/>
+
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:background="@color/greenBackground"
+            android:textColor="@color/lightTextColor"
+            android:text="Submit Request"/>
     </LinearLayout>
-=======
-
-        <android.support.v7.widget.AppCompatSpinner
-            android:layout_width="0dp"
-            android:layout_weight="6"
-            android:layout_height="wrap_content"
-            android:entries="@array/group_type_array"
-            />
-
-        <android.support.v7.widget.AppCompatSpinner
-            android:layout_width="0dp"
-            android:layout_weight="4"
-            android:layout_height="wrap_content"
-            />
-
->>>>>>> 938de7a297806ffb800bc71a99e6d3fb270a51b1
-
 
 
 </LinearLayout>

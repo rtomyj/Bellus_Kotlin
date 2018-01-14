@@ -16,7 +16,8 @@
     <style name="LightSubHeaderText" parent="LightHeaderText">
         <item name="android:textSize">17sp</item>
         <item name="android:gravity">left|center_vertical</item>
-        <item name="android:padding">5dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
         <item name="android:fontFamily">sans-serif</item>
     </style>
 
@@ -69,7 +70,6 @@
     <style name="SingleLineEditText" parent="InfoTextSmall">
         <item name="android:minLines">1</item>
         <item name="android:maxLines">1</item>
-        <item name="android:padding">10dp</item>
-        <item name="android:background">@color/parentBackgroundColor</item>
+        <item name="android:padding">5dp</item>
     </style>
 </resources>

@@ -22,7 +22,6 @@
         <item>email</item>
     </array>
 
-<<<<<<< HEAD
     <string name="about_rose">Mother of a little girl and boy. I have been doing cosmetology for more than 8 years. I have worked in a popular cosmetics store for years, but come to realize that I love to make people beautiful. Doing cosmetology is more fun than selling cosmetics. I believe the face is a canvas and I happen to be a pretty darn good artist. \n\nIf you have any questions feel free to contact me through sms, email or social media.</string>
 
     <string name="policy_booking">Booking</string>
@@ -36,17 +35,11 @@
 
     <string name="policy_cancellations">Cancellations</string>
     <string name="policy_cancellations_content">You have the right to cancel at any time with the consequence of losing the time slot as well as the security deposit. If cancellation occurs on my end due to illness, accident, weather, etc - a full refund will be issued. If I deem a circumstance on your end is grounds for a refund of the down payment, I will issue it.</string>
-=======
     <array name="group_type_array">
-        <item>group size</item>
-        <item>single person</item>
+        <item>single</item>
         <item>group</item>
         <item>wedding</item>
     </array>
 
-    <array name="group_size_array">
-        <item>1</item>
-    </array>
 
->>>>>>> 938de7a297806ffb800bc71a99e6d3fb270a51b1
 </resources>

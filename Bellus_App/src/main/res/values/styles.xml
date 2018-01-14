@@ -25,12 +25,12 @@
 
 
     <style name="SmallIcon">
-        <item name="android:layout_height">50dp</item>
-        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:layout_width">60dp</item>
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
         <item name="android:adjustViewBounds">true</item>
-        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginRight">15dp</item>
     </style>
 
     <style name="PurpleButton">
@@ -44,17 +44,6 @@
         <item name="android:textColor">@color/lightTextColor</item>
     </style>
 
-<<<<<<< HEAD
-
-=======
-    <style name="SingleLineEditText" parent="InfoTextSmall">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:minLines">1</item>
-        <item name="android:maxLines">1</item>
-        <item name="android:padding">10dp</item>
-        <item name="android:background">@color/parentBackgroundColor</item>
-    </style>
->>>>>>> 938de7a297806ffb800bc71a99e6d3fb270a51b1
 
 
 </resources>

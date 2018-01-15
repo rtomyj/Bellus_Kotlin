@@ -39,6 +39,14 @@
 
     </style>
 
+    <style name="InfoTextHeader" >
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/header1TextColor</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif</item>
+
+    </style>
     <style name="InfoTextMedium" >
         <item name="android:textSize">21sp</item>
         <item name="android:textColor">@color/header2TextColor</item>
@@ -70,6 +78,7 @@
     <style name="SingleLineEditText" parent="InfoTextSmall">
         <item name="android:minLines">1</item>
         <item name="android:maxLines">1</item>
-        <item name="android:padding">5dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:background">@color/parentBackgroundColor</item>
     </style>
 </resources>

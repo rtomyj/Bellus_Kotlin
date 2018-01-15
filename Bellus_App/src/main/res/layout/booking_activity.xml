@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/parent"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:background="#f6f6f6"
@@ -7,33 +8,27 @@
     >
 
     <ScrollView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:foregroundGravity="top"
         android:layout_height="wrap_content">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_weight="1"
+        style="@style/FormLayout1"
         android:background="@color/parentBackgroundColor"
-        android:baselineAligned="false"
+        android:layout_marginBottom="130dp"
         android:elevation="5dp"
         android:orientation="vertical">
 
         <TextView
-            style="@style/InfoTextMedium"
+            style="@style/InfoTextHeader"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Personal Information"
             android:layout_margin="5dp"
+            android:text="Personal Information"
             />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:gravity="center_vertical"
+            style="@style/FormLayout2"
             android:orientation="horizontal">
 
 
@@ -42,7 +37,7 @@
                 style="@style/SingleLineEditText"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:hint="name*"
+                android:hint="@string/name_request"
                 android:imeOptions="actionNext"
                 android:inputType="textPersonName"
                 android:nextFocusDown="@id/client_number"
@@ -53,7 +48,7 @@
                 style="@style/SingleLineEditText"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:hint="phone number*"
+                android:hint="@string/phone_request"
                 android:imeOptions="actionNext"
                 android:inputType="phone"
                 android:nextFocusDown="@id/client_email"
@@ -63,29 +58,27 @@
         </LinearLayout>
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
             <EditText
                 android:id="@+id/client_email"
                 style="@style/SingleLineEditText"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_weight="5"
-                android:hint="email*"
+                android:layout_marginTop="5dp"
+                android:hint="@string/email_request"
                 android:inputType="textEmailAddress"
                 android:imeOptions="actionNext"
                 android:nextFocusUp="@id/client_name"
                 />
 
 
-        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
 
 
         <TextView
-            style="@style/InfoTextMedium"
+            style="@style/InfoTextHeader"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Appointment Information"
@@ -93,107 +86,122 @@
             />
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+
+
             <LinearLayout
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                style="@style/FormLayout2"
                 android:orientation="horizontal"
-                android:padding="10dp"
+                android:layout_marginBottom="15dp"
                 >
 
-                <TextView
-                    style="@style/InfoTextSmall"
-                    android:layout_marginRight="5dp"
-                    android:textColor="#555"
-                    android:text="Package:"/>
                 <Spinner
-                    android:layout_width="wrap_content"
+                    android:id="@+id/appointment_type"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:entries="@array/group_type_array"
                     />
+                <Spinner
+                    android:id="@+id/appointment_size"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/group_number_aray"
+                    />
 
-            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/FormLayout2"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
 
 
             <LinearLayout
-                android:layout_weight="1"
+                android:gravity="center"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp"
-                >
+                android:layout_weight="7"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
 
                 <TextView
                     style="@style/InfoTextSmall"
-                    android:layout_marginRight="5dp"
-                    android:textColor="#555"
-                    android:text="Group Size:"/>
-                <Spinner
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    />
+                    android:textStyle="bold"
+                    android:text="At: 12:00 PM"/>
+
+                <TextView
+                    style="@style/InfoTextSmall"
+                    android:id="@+id/dateTV"
+                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:text="On: Mon, June 18"/>
 
             </LinearLayout>
 
-
-
-
+            <Button
+                android:background="@color/colorAccent"
+                android:textColor="@color/lightTextColor"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:onClick="changeTime"
+                android:layout_marginRight="5dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:text="change time"/>
+            <Button
+                android:background="@color/colorAccent"
+                android:textColor="@color/lightTextColor"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:layout_height="wrap_content"
+                android:onClick="changeDate"
+                android:text="change date"/>
         </LinearLayout>
 
-
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
+        style="@style/FormLayout2"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginRight="5dp"
-            android:textColor="#555"
-            android:gravity="center"
-            android:text="Appointment\nAddress:"
-            />
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:orientation="vertical">
 
             <EditText
+                android:id="@+id/client_street_address"
                 style="@style/SingleLineEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="street address"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:hint="@string/street_address_request"
                 />
 
                 <EditText
+                    android:id="@+id/client_zip"
                     style="@style/SingleLineEditText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="zip"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:hint="@string/zip_request"
+                    android:inputType="number"
+                    android:maxLength="5"
                     />
 
 
-        </LinearLayout>
 
     </LinearLayout>
 
         <EditText
+            android:id="@+id/client_comment"
             style="@style/SingleLineEditText"
             android:layout_width="match_parent"
             android:minLines="2"
             android:maxLines="6"
-            android:hint="describe look, paste links, etc - will only do make-up no hair/nails/etc"
+            android:hint="@string/comments_request"
             android:gravity="top"
+            android:layout_marginTop="5dp"
             />
 
     </LinearLayout>
@@ -201,11 +209,13 @@
 
 
     <LinearLayout
+        android:id="@+id/pricing_layout"
         android:layout_width="match_parent"
         android:gravity="center"
         android:layout_height="wrap_content"
         android:background="#fff"
-        android:elevation="24dp"
+        android:layout_gravity="bottom"
+        android:elevation="8dp"
         android:orientation="vertical">
         <TextView
             android:layout_width="wrap_content"
@@ -218,18 +228,19 @@
             style="@style/InfoTextBig"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="$100.00"
+            android:text="$0.00"
             android:textColor="@color/greenBackground"
             android:layout_margin="5dp"/>
 
 
         <Button
-            android:layout_width="150dp"
-            android:layout_height="60dp"
+            android:layout_width="130dp"
+            android:layout_height="45dp"
             android:background="@color/greenBackground"
             android:textColor="@color/lightTextColor"
+            android:onClick="submitRequest"
             android:text="Submit Request"/>
     </LinearLayout>
 
 
-</LinearLayout>
+</FrameLayout>

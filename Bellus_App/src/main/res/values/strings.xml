@@ -35,11 +35,29 @@
 
     <string name="policy_cancellations">Cancellations</string>
     <string name="policy_cancellations_content">You have the right to cancel at any time with the consequence of losing the time slot as well as the security deposit. If cancellation occurs on my end due to illness, accident, weather, etc - a full refund will be issued. If I deem a circumstance on your end is grounds for a refund of the down payment, I will issue it.</string>
+
+
     <array name="group_type_array">
+        <item>*type</item>
         <item>single</item>
         <item>group</item>
         <item>wedding</item>
     </array>
+
+    <array name="group_number_aray">
+        <item>""</item>
+        <item>"1"</item>
+        <item>"2"</item>
+        <item>"3"</item>
+        <item>"4"</item>
+    </array>
+
+    <string name="name_request">*name</string>
+    <string name="phone_request">*phone number</string>
+    <string name="email_request">*email</string>
+    <string name="street_address_request">*street address</string>
+    <string name="zip_request">*zip</string>
+    <string name="comments_request">*describe look, paste links, etc - will only do make-up no hair/nails/etc</string>
 
 
 </resources>

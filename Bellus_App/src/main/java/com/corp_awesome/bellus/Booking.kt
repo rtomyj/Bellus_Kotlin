@@ -13,10 +13,6 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 
-/**
- *
- */
-
 /*
     TODO
     Type of appointments - group appointments, one on one, wedding
@@ -154,11 +150,39 @@ class Booking : AppCompatActivity(), OnItemSelectedListener {
     fun changeTime (v : View){
         val timePicker = TimePicker(this)
         val dialog = createPickerDialog(timePicker)
-        dialog.setPositiveButton("Ok", null)
+        dialog.setPositiveButton("Ok", {dialogInterface: DialogInterface, i: Int ->
+
+            val cal = Calendar.getInstance()
+
+
+            if (android.os.Build.VERSION.SDK_INT < 23) {
+                cal.set(Calendar.HOUR, timePicker.currentHour)
+                cal.set(Calendar.HOUR, timePicker.currentMinute)
+            }
+            else {
+                cal.set(Calendar.HOUR, timePicker.hour)
+                cal.set(Calendar.MINUTE, timePicker.minute)
+            }
+
+            changeTime(cal)
+
+        })
 
         dialog.create().show()
 
 
+    }
+
+    private fun changeTime(cal: Calendar ){
+        val timeTV = findViewById<TextView>(R.id.timeTV)
+        val time : String
+
+        if (cal.get(Calendar.HOUR) < 10)
+            time= "At: " + SimpleDateFormat("h:mm aa").format(cal.time)
+        else
+            time= "At: " + SimpleDateFormat("hh:mm aa").format(cal.time)
+
+        timeTV.text = time
     }
 
     fun changeDate (v : View){

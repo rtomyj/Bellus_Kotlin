@@ -43,21 +43,29 @@
                 android:nextFocusDown="@id/client_number"
                 />
 
-            <EditText
-                android:id="@+id/client_number"
-                style="@style/SingleLineEditText"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:hint="@string/phone_request"
-                android:imeOptions="actionNext"
-                android:inputType="phone"
-                android:nextFocusDown="@id/client_email"
-                android:nextFocusUp="@id/client_name"
-                />
+
+                <EditText
+                    android:id="@+id/client_number"
+                    style="@style/SingleLineEditText"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:hint="@string/phone_request"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:nextFocusDown="@id/client_email"
+                    android:nextFocusUp="@id/client_name"
+                    android:maxLength="10"
+                    />
+
+
 
         </LinearLayout>
 
 
+        <LinearLayout
+            style="@style/FormLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
             <EditText
                 android:id="@+id/client_email"
                 style="@style/SingleLineEditText"
@@ -69,6 +77,7 @@
                 android:imeOptions="actionNext"
                 android:nextFocusUp="@id/client_name"
                 />
+        </LinearLayout>
 
 
 
@@ -129,6 +138,7 @@
 
                 <TextView
                     style="@style/InfoTextSmall"
+                    android:id="@+id/timeTV"
                     android:layout_width="wrap_content"
                     android:textStyle="bold"
                     android:text="At: 12:00 PM"/>
@@ -146,7 +156,7 @@
                 android:background="@color/colorAccent"
                 android:textColor="@color/lightTextColor"
                 android:layout_width="0dp"
-                android:layout_weight="4"
+                android:layout_weight="3"
                 android:layout_height="wrap_content"
                 android:onClick="changeTime"
                 android:layout_marginRight="5dp"
@@ -157,7 +167,7 @@
                 android:background="@color/colorAccent"
                 android:textColor="@color/lightTextColor"
                 android:layout_width="0dp"
-                android:layout_weight="4"
+                android:layout_weight="3"
                 android:paddingRight="10dp"
                 android:paddingLeft="10dp"
                 android:layout_height="wrap_content"

@@ -14,36 +14,37 @@ class Popups {
 
     companion object {
         fun policyAlertDialog(context : Context, welcome: Boolean = false)  : AlertDialog.Builder{
-            val policyDialog = AlertDialog.Builder(context)
             val layout : LinearLayout = (context as Activity).layoutInflater.inflate(R.layout.policies_info_layout, null) as LinearLayout
-
             if (! welcome){
                 val welcomeTV = layout.findViewById<TextView>(R.id.welcomeTV)
                 layout.removeView(welcomeTV)
 
             }
 
-            policyDialog.setView(layout)
-            policyDialog.setPositiveButton("Understood", null)
-            policyDialog.setCancelable(false)
+            val policyDialog = customViewAlertDialog(context, layout)
 
+            policyDialog.setPositiveButton(context.resources.getString(R.string.understood), null)
 
             return policyDialog
 
         }
 
         fun roseAlertDialog(context : Context)  : AlertDialog.Builder{
-            val policyDialog = AlertDialog.Builder(context)
             val layout = (context as Activity).layoutInflater.inflate(R.layout.rose_info_layout, null)
+            val roseDialog = customViewAlertDialog(context, layout)
 
-            //val inflater : LayoutInflater = getSystemService(this.layoutin)
+            roseDialog.setPositiveButton(context.resources.getString(R.string.dismiss), null)
 
-            policyDialog.setView(layout)
-            policyDialog.setPositiveButton("Dismiss", null)
-            policyDialog.setCancelable(false)
+            return roseDialog
 
-            return policyDialog
+        }
 
+        fun customViewAlertDialog(context : Context, view : View) : AlertDialog.Builder{
+            val dialog = AlertDialog.Builder(context)
+
+            dialog.setView(view)
+            dialog.setCancelable(false)
+            return dialog
         }
     }
 }

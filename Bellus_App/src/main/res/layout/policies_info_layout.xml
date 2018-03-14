@@ -22,7 +22,7 @@
 
     <TextView
         style="@style/AlertDialogHeaderText"
-        android:text="Policies"
+        android:text="@string/policies"
         />
 
     <ScrollView

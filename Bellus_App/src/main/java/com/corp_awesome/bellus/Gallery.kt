@@ -28,7 +28,7 @@ class Gallery : AppCompatActivity() {
     private lateinit var galleryAdapter: GalleryAdapter
 
     private val absoluteAssetPath = "file:///android_asset/"
-    private var picList: ArrayList<String> = ArrayList()
+    private val picList: ArrayList<String> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,7 +56,7 @@ class Gallery : AppCompatActivity() {
         super.onStart()
 
         if (! init) {
-            frame = findViewById<FrameLayout>(R.id.parent_frame)
+            frame = findViewById(R.id.parent_frame)
             init = true
         }
 
@@ -92,7 +92,7 @@ class Gallery : AppCompatActivity() {
     }
 
     private fun exitPreview(){
-        var img = frame.getChildAt(1).findViewById<ImageView>(R.id.preview_iv)
+        val img = frame.getChildAt(1).findViewById<ImageView>(R.id.preview_iv)
 
         Glide.with(this).clear(img)
 

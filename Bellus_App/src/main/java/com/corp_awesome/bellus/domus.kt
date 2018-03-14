@@ -63,16 +63,6 @@ class Domus : AppCompatActivity() {
 
     }
 
-    private fun recycleImages(){
-        val bookingIV : ImageView= findViewById(R.id.booking_IV)
-        val aboutIV: ImageView = findViewById(R.id.about_IV)
-
-        var drawable : BitmapDrawable= bookingIV.drawable as BitmapDrawable
-        drawable.bitmap.recycle()
-        drawable =  aboutIV.drawable as BitmapDrawable
-        drawable.bitmap.recycle()
-
-    }
     fun bookAppointment(v : View){
 
         val bookingIntent = Intent(this, Booking::class.java)

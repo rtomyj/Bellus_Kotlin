@@ -38,13 +38,13 @@
                     style="@style/LightHeaderText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/book_appt"/>
+                    android:text="@string/book_appointment"/>
                 <TextView
                     style="@style/LightSubHeaderText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Reserve time slot"
+                    android:text="@string/reserve_time"
                     />
 
 
@@ -84,7 +84,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="View examples of previous work"
+                android:text="@string/view_gallery"
                 />
 
         </LinearLayout>
@@ -142,7 +142,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Policies and information about the artist"
+                android:text="@string/policy_header"
                 />
 
         </LinearLayout>

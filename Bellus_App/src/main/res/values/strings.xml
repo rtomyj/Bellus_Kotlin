@@ -1,15 +1,46 @@
 <resources>
     <string name="app_name">Bellus</string>
+    <string name="rose_name">Rose Gomez</string>
 
-    <string name="book_appt">Book Appointment</string>
+    <string name="book_appointment">Book Appointment</string>
+    <string name="reserve_time">Reserve time slot</string>
     <string name="gallery">Gallery</string>
+    <string name="view_gallery">View examples of previous work</string>
     <string name="about">About</string>
+    <string name="policy_header">Policies and information about the artist</string>
 
     <string name="booking_contentDescription">Picture for booking button</string>
     <string name="gallery_contentDescription">Picture for gallery button</string>
     <string name="about_contentDescription">Picture for about button</string>
 
+    <!--
+        Booking.kt
+        -->
+    <string name="personal_information">Personal Information</string>
+    <string name="appointment_info">Appointment Information</string>
+    <string name="time">Time</string>
+    <string name="def_appointment_time">At: 12:00 PM</string>
 
+    <string name="name_request">*name</string>
+    <string name="phone_request">*phone number</string>
+    <string name="email_request">*email</string>
+    <string name="street_address_request">*street address of appointment</string>
+    <string name="zip_request">*zip</string>
+    <string name="comments_request">*describe look, paste links, etc - will only do make-up no hair/nails/etc</string>
+
+    <string name="required_field_warning">* Required fields</string>
+    <string name="submit_request">Submit Request</string>
+
+
+    <!--
+        About.kt
+        -->
+    <string name="about_me">About Me</string>
+    <string name="policies">Policies</string>
+
+    <!--
+        contact info resources
+        -->
     <string name="primary_email_address">bellus.cosmetology@gmail.com</string>
     <string name="primary_phone_number">8156411587‬</string>
 
@@ -22,8 +53,14 @@
         <item>email</item>
     </array>
 
+    <!--
+        About Rose strings
+        -->
     <string name="about_rose">Mother of a little girl and boy. I have been doing cosmetology for more than 8 years. I have worked in a popular cosmetics store for years, but come to realize that I love to make people beautiful. Doing cosmetology is more fun than selling cosmetics. I believe the face is a canvas and I happen to be a pretty darn good artist. \n\nIf you have any questions feel free to contact me through sms, email or social media.</string>
 
+    <!--
+        Strings that pertain to the appointment policy
+        -->
     <string name="policy_booking">Booking</string>
     <string name="policy_booking_content">When you submit a booking request I will check to see If I am available. If I am and I believe I am able to do the look you described I will respond saying so. Along with my response, I will email information about payment. If you agree then my time will be yours for the specified duration.</string>
 
@@ -36,7 +73,15 @@
     <string name="policy_cancellations">Cancellations</string>
     <string name="policy_cancellations_content">You have the right to cancel at any time with the consequence of losing the time slot as well as the security deposit. If cancellation occurs on my end due to illness, accident, weather, etc - a full refund will be issued. If I deem a circumstance on your end is grounds for a refund of the down payment, I will issue it.</string>
 
+    <!--
+        Strings for dialogs
+        -->
+    <string name="understood">Understood</string>
+    <string name="dismiss">Dismiss</string>
 
+    <!--
+        values for group spinners
+        -->
     <array name="group_type_array">
         <item>*type</item>
         <item>single</item>
@@ -44,20 +89,13 @@
         <item>wedding</item>
     </array>
 
-    <array name="group_number_aray">
+    <array name="group_number_array">
         <item>""</item>
         <item>"1"</item>
         <item>"2"</item>
         <item>"3"</item>
         <item>"4"</item>
     </array>
-
-    <string name="name_request">*name</string>
-    <string name="phone_request">*phone number</string>
-    <string name="email_request">*email</string>
-    <string name="street_address_request">*street address</string>
-    <string name="zip_request">*zip</string>
-    <string name="comments_request">*describe look, paste links, etc - will only do make-up no hair/nails/etc</string>
 
 
 </resources>

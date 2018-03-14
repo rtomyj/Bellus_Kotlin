@@ -36,7 +36,7 @@
 
         <activity android:name=".Booking"
                   android:parentActivityName=".Domus"
-                  android:label="@string/book_appt"
+                  android:label="@string/book_appointment"
                   android:windowSoftInputMode="adjustPan"
                   android:screenOrientation="portrait">
             <intent-filter>

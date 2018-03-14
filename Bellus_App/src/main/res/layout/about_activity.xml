@@ -39,7 +39,7 @@
             android:paddingLeft="15dp"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
-            android:text="Rose Gomez"/>
+            android:text="@string/rose_name"/>
 
 
         <ScrollView
@@ -100,11 +100,11 @@
 
                 <Button
                     style="@style/PurpleButton"
-                    android:text="About Me"
+                    android:text="@string/about_me"
                     android:onClick="showAboutRose"/>
                 <Button
                     style="@style/PurpleButton"
-                    android:text="Policies"
+                    android:text="@string/policies"
                     android:onClick="showBookingPolicy"/>
             </LinearLayout>
 

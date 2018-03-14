@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
              android:id="@+id/parent"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:background="#f6f6f6"
-              android:orientation="vertical"
     >
 
     <ScrollView
         android:layout_width="match_parent"
-        android:foregroundGravity="top"
+        android:layout_marginBottom="130dp"
         android:layout_height="wrap_content">
 
     <LinearLayout
         style="@style/FormLayout1"
         android:background="@color/parentBackgroundColor"
-        android:layout_marginBottom="130dp"
-        android:elevation="5dp"
+        android:elevation="3dp"
+        android:isScrollContainer="true"
+        android:layout_marginBottom="5dp"
         android:orientation="vertical">
 
         <TextView
@@ -24,7 +25,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:text="Personal Information"
+            android:paddingLeft="5dp"
+            android:text="@string/personal_information"
             />
 
         <LinearLayout
@@ -63,13 +65,11 @@
 
 
         <LinearLayout
-            style="@style/FormLayout2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            style="@style/FormLayout2">
             <EditText
                 android:id="@+id/client_email"
                 style="@style/SingleLineEditText"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_weight="5"
                 android:layout_marginTop="5dp"
                 android:hint="@string/email_request"
@@ -83,48 +83,21 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="30dp"/>
+            android:layout_height="10dp"/>
 
 
         <TextView
             style="@style/InfoTextHeader"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Appointment Information"
+            android:text="@string/appointment_info"
             android:layout_margin="5dp"
+            android:paddingLeft="5dp"
             />
-
-
-
-
-            <LinearLayout
-                style="@style/FormLayout2"
-                android:orientation="horizontal"
-                android:layout_marginBottom="15dp"
-                >
-
-                <Spinner
-                    android:id="@+id/appointment_type"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:entries="@array/group_type_array"
-                    />
-                <Spinner
-                    android:id="@+id/appointment_size"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:entries="@array/group_number_aray"
-                    />
-
-
-
-        </LinearLayout>
 
         <LinearLayout
             style="@style/FormLayout2"
-            android:layout_gravity="center"
+            android:gravity="center"
             android:orientation="horizontal">
 
 
@@ -133,22 +106,23 @@
                 android:layout_width="0dp"
                 android:layout_weight="7"
                 android:orientation="vertical"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
 
+                <TextView
+                    style="@style/InfoTextMedium"
+                    android:text="@string/time"
+                    />
                 <TextView
                     style="@style/InfoTextSmall"
                     android:id="@+id/timeTV"
                     android:layout_width="wrap_content"
-                    android:textStyle="bold"
-                    android:text="At: 12:00 PM"/>
+                    android:text="@string/def_appointment_time"/>
 
                 <TextView
                     style="@style/InfoTextSmall"
                     android:id="@+id/dateTV"
-                    android:layout_width="wrap_content"
-                    android:textStyle="bold"
-                    android:text="On: Mon, June 18"/>
+                    android:layout_width="wrap_content"/>
 
             </LinearLayout>
 
@@ -175,6 +149,35 @@
                 android:text="change date"/>
         </LinearLayout>
 
+
+            <LinearLayout
+                style="@style/FormLayout2"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                >
+
+                <Spinner
+                    android:id="@+id/appointment_type"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/group_type_array"
+                    />
+                <Spinner
+                    android:id="@+id/appointment_size"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/group_number_array"
+                    />
+
+
+
+        </LinearLayout>
+
+
+
     <LinearLayout
         style="@style/FormLayout2"
         android:orientation="horizontal">
@@ -185,7 +188,7 @@
                 android:id="@+id/client_street_address"
                 style="@style/SingleLineEditText"
                 android:layout_width="0dp"
-                android:layout_weight="3"
+                android:layout_weight="4"
                 android:hint="@string/street_address_request"
                 />
 
@@ -203,16 +206,25 @@
 
     </LinearLayout>
 
-        <EditText
-            android:id="@+id/client_comment"
-            style="@style/SingleLineEditText"
+        <LinearLayout
+            style="@style/FormLayout2"
             android:layout_width="match_parent"
-            android:minLines="2"
-            android:maxLines="6"
-            android:hint="@string/comments_request"
-            android:gravity="top"
-            android:layout_marginTop="5dp"
-            />
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/client_comment"
+                style="@style/SingleLineEditText"
+                android:layout_width="match_parent"
+                android:minLines="2"
+                android:maxLines="10"
+                android:hint="@string/comments_request"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:layout_marginBottom="5dp"
+                />
+        </LinearLayout>
+
 
     </LinearLayout>
     </ScrollView>
@@ -222,7 +234,7 @@
         android:id="@+id/pricing_layout"
         android:layout_width="match_parent"
         android:gravity="center"
-        android:layout_height="wrap_content"
+        android:layout_height="120dp"
         android:background="#fff"
         android:layout_gravity="bottom"
         android:elevation="8dp"
@@ -230,17 +242,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="* Required fields"
+            android:text="@string/required_field_warning"
             android:textColor="#555"
             android:textSize="12sp"/>
 
         <TextView
             style="@style/InfoTextBig"
+            android:id="@+id/priceTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="$0.00"
             android:textColor="@color/greenBackground"
-            android:layout_margin="5dp"/>
+            android:layout_margin="5dp"
+            tools:ignore="HardcodedText"/>
 
 
         <Button
@@ -249,7 +263,7 @@
             android:background="@color/greenBackground"
             android:textColor="@color/lightTextColor"
             android:onClick="submitRequest"
-            android:text="Submit Request"/>
+            android:text="@string/submit_request"/>
     </LinearLayout>
 
 

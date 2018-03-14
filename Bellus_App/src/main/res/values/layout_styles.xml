@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+        <!--
+            Styles used on layouts that contain elements such as: LinerarLayout, GridLayout, etc
+        -->
 <resources>
     <style name="FormLayout1">
         <item name="android:layout_width">wrap_content</item>
@@ -8,6 +11,8 @@
     </style>
 
     <style name="FormLayout2" parent="FormLayout1">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">center_vertical</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">8dp</item>

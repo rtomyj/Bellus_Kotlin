@@ -41,7 +41,7 @@
 
     <style name="InfoTextHeader" >
         <item name="android:textSize">24sp</item>
-        <item name="android:textColor">@color/header1TextColor</item>
+        <item name="android:textColor">@color/header1TexstColor</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:fontFamily">sans-serif</item>

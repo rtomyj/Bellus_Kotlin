@@ -2,243 +2,265 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
              android:id="@+id/parent"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="#f6f6f6"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="#e4e4e4"
     >
 
-    <ScrollView
+    <ScrolslView
         android:layout_width="match_parent"
-        android:layout_marginBottom="130dp"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="130dp">
 
-    <LinearLayout
-        style="@style/FormLayout1"
-        android:background="@color/parentBackgroundColor"
-        android:elevation="3dp"
-        android:isScrollContainer="true"
-        android:layout_marginBottom="5dp"
-        android:orientation="vertical">
-
-        <TextView
-            style="@style/InfoTextHeader"
+        <ViewSwitcher
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:paddingLeft="5dp"
-            android:text="@string/personal_information"
-            />
-
-        <LinearLayout
-            style="@style/FormLayout2"
-            android:orientation="horizontal">
+            android:layout_marginBottom="5dp"
+            android:isScrollContainer="true">
 
 
-            <EditText
-                android:id="@+id/client_name"
-                style="@style/SingleLineEditText"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:hint="@string/name_request"
-                android:imeOptions="actionNext"
-                android:inputType="textPersonName"
-                android:nextFocusDown="@id/client_number"
-                />
+            <LinearLayouts
+                style="@style/FormLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/parentBackgroundColor"
+                android:elevation="3dp"
+                android:orientation="vertical">
 
-
-                <EditText
-                    android:id="@+id/client_number"
-                    style="@style/SingleLineEditText"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:hint="@string/phone_request"
-                    android:imeOptions="actionNext"
-                    android:inputType="phone"
-                    android:nextFocusDown="@id/client_email"
-                    android:nextFocusUp="@id/client_name"
-                    android:maxLength="10"
+                <TextView
+                    style="@style/InfoTextHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:paddingLeft="5dp"
+                    android:text="@string/personal_information"
                     />
 
+                <LinearLayout
+                    style="@style/FormLayout2"
+                    android:orientation="horizontal">
 
 
-        </LinearLayout>
+                    <EditText
+                        android:id="@+id/client_name"
+                        style="@style/SingleLineEditText"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:hint="@string/name_request"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:nextFocusDown="@id/client_number"
+                        />
 
 
-        <LinearLayout
-            style="@style/FormLayout2">
-            <EditText
-                android:id="@+id/client_email"
-                style="@style/SingleLineEditText"
-                android:layout_width="0dp"
-                android:layout_weight="5"
-                android:layout_marginTop="5dp"
-                android:hint="@string/email_request"
-                android:inputType="textEmailAddress"
-                android:imeOptions="actionNext"
-                android:nextFocusUp="@id/client_name"
-                />
-        </LinearLayout>
+                    <EditText
+                        android:id="@+id/client_number"
+                        style="@style/SingleLineEditText"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:hint="@string/phone_request"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:nextFocusDown="@id/client_email"
+                        android:nextFocusUp="@id/client_name"
+                        />
 
 
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="10dp"/>
+                </LinearLayout>
 
 
-        <TextView
-            style="@style/InfoTextHeader"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/appointment_info"
-            android:layout_margin="5dp"
-            android:paddingLeft="5dp"
-            />
+                <LinearLayout
+                    style="@style/FormLayout2">
 
-        <LinearLayout
-            style="@style/FormLayout2"
-            android:gravity="center"
-            android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/client_email"
+                        style="@style/SingleLineEditText"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="5"
+                        android:hint="@string/email_request"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:nextFocusUp="@id/client_name"
+                        />
+                </LinearLayout>
+
+
+            </LinearLayouts>
 
 
             <LinearLayout
-                android:gravity="center"
-                android:layout_width="0dp"
-                android:layout_weight="7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_height="wrap_content">
+                >
 
 
                 <TextView
-                    style="@style/InfoTextMedium"
-                    android:text="@string/time"
+                    style="@style/InfoTextHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:paddingLeft="5dp"
+                    android:text="@string/appointment_info"
                     />
-                <TextView
-                    style="@style/InfoTextSmall"
-                    android:id="@+id/timeTV"
-                    android:layout_width="wrap_content"
-                    android:text="@string/def_appointment_time"/>
 
-                <TextView
-                    style="@style/InfoTextSmall"
-                    android:id="@+id/dateTV"
-                    android:layout_width="wrap_content"/>
+                <LinearLayout
+                    style="@style/FormLayout2"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            style="@style/InfoTextMedium"
+                            android:text="@string/time"
+                            />
+
+                        <TextView
+                            android:id="@+id/timeTV"
+                            style="@style/InfoTextSmall"
+                            android:layout_width="wrap_content"
+                            android:text="@string/def_appointment_time"/>
+
+                        <TextView
+                            android:id="@+id/dateTV"
+                            style="@style/InfoTextSmall"
+                            android:layout_width="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="3"
+                        android:background="@color/colorAccent"
+                        android:onClick="changeTime"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="change time"
+                        android:textColor="@color/lightTextColor"/>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@color/colorAccent"
+                        android:onClick="changeDate"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="change date"
+                        android:textColor="@color/lightTextColor"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    style="@style/FormLayout2"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <Spinner
+                        android:id="@+id/appointment_type"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/group_type_array"
+                        />
+
+                    <Spinner
+                        android:id="@+id/appointment_size"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/group_number_array"
+                        />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    style="@style/FormLayout2"
+                    android:orientation="horizontal">
+
+
+                    <EditText
+                        android:id="@+id/client_street_address"
+                        style="@style/SingleLineEditText"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:hint="@string/street_address_request"
+                        />
+
+                    <EditText
+                        android:id="@+id/client_zip"
+                        style="@style/SingleLineEditText"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:hint="@string/zip_request"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/FormLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <EditText
+                        android:id="@+id/client_comment"
+                        style="@style/SingleLineEditText"
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="top"
+                        android:hint="@string/comments_request"
+                        android:inputType="textMultiLine"
+                        android:maxLines="10"
+                        android:minLines="2"
+                        />
+                </LinearLayout>
+
 
             </LinearLayout>
 
             <Button
-                android:background="@color/colorAccent"
-                android:textColor="@color/lightTextColor"
-                android:layout_width="0dp"
-                android:layout_weight="3"
-                android:layout_height="wrap_content"
-                android:onClick="changeTime"
-                android:layout_marginRight="5dp"
-                android:paddingRight="10dp"
-                android:paddingLeft="10dp"
-                android:text="change time"/>
-            <Button
-                android:background="@color/colorAccent"
-                android:textColor="@color/lightTextColor"
-                android:layout_width="0dp"
-                android:layout_weight="3"
-                android:paddingRight="10dp"
-                android:paddingLeft="10dp"
-                android:layout_height="wrap_content"
-                android:onClick="changeDate"
-                android:text="change date"/>
-        </LinearLayout>
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="30dp"
+                android:background="@color/parentBackgroundColor"
+                android:text="Proceed"
+                android:textColor="@color/colorPrimaryDark"/>
 
-
-            <LinearLayout
-                style="@style/FormLayout2"
-                android:orientation="horizontal"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                >
-
-                <Spinner
-                    android:id="@+id/appointment_type"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:entries="@array/group_type_array"
-                    />
-                <Spinner
-                    android:id="@+id/appointment_size"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:entries="@array/group_number_array"
-                    />
-
-
-
-        </LinearLayout>
-
-
-
-    <LinearLayout
-        style="@style/FormLayout2"
-        android:orientation="horizontal">
-
-
-
-            <EditText
-                android:id="@+id/client_street_address"
-                style="@style/SingleLineEditText"
-                android:layout_width="0dp"
-                android:layout_weight="4"
-                android:hint="@string/street_address_request"
-                />
-
-                <EditText
-                    android:id="@+id/client_zip"
-                    style="@style/SingleLineEditText"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:hint="@string/zip_request"
-                    android:inputType="number"
-                    android:maxLength="5"
-                    />
-
-
-
-    </LinearLayout>
-
-        <LinearLayout
-            style="@style/FormLayout2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-
-            <EditText
-                android:id="@+id/client_comment"
-                style="@style/SingleLineEditText"
-                android:layout_width="match_parent"
-                android:minLines="2"
-                android:maxLines="10"
-                android:hint="@string/comments_request"
-                android:gravity="top"
-                android:inputType="textMultiLine"
-                android:layout_marginBottom="5dp"
-                />
-        </LinearLayout>
-
-
-    </LinearLayout>
-    </ScrollView>
+        </ViewSwitcher>
+    </ScrolslView>
 
 
     <LinearLayout
         android:id="@+id/pricing_layout"
         android:layout_width="match_parent"
-        android:gravity="center"
         android:layout_height="120dp"
-        android:background="#fff"
         android:layout_gravity="bottom"
+        android:background="#fff"
         android:elevation="8dp"
+        android:gravity="center"
         android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -247,13 +269,13 @@
             android:textSize="12sp"/>
 
         <TextView
-            style="@style/InfoTextBig"
             android:id="@+id/priceTV"
+            style="@style/InfoTextBig"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:text="$0.00"
             android:textColor="@color/greenBackground"
-            android:layout_margin="5dp"
             tools:ignore="HardcodedText"/>
 
 
@@ -261,9 +283,9 @@
             android:layout_width="130dp"
             android:layout_height="45dp"
             android:background="@color/greenBackground"
-            android:textColor="@color/lightTextColor"
             android:onClick="submitRequest"
-            android:text="@string/submit_request"/>
+            android:text="@string/submit_request"
+            android:textColor="@color/lightTextColor"/>
     </LinearLayout>
 
 

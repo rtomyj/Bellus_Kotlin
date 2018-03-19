@@ -21,7 +21,7 @@ class About : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.about_activity)
 
-        supportActionBar?.elevation = 0f
+        supportActionBar?.hide()
 
         addPictures()
 

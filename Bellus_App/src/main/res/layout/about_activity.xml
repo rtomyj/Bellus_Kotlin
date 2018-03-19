@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                  android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:background="#eee"
-                  android:orientation="vertical">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#e4e4e4"
+              android:orientation="vertical">
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="280dp">
@@ -14,8 +15,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:adjustViewBounds="true"
-            android:scaleType="center"
             android:elevation="8dp"
+            android:scaleType="center"
             />
 
 
@@ -24,69 +25,76 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_marginBottom="10dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
+        android:layout_weight="1"
         android:background="@color/parentBackgroundColor"
-        android:orientation="vertical"
         android:elevation="5dp"
-        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
         >
 
         <TextView
-            style="@style/InfoTextBig"
-            android:paddingRight="15dp"
+            style="@style/InfoTextHeader"
             android:paddingLeft="15dp"
-            android:paddingTop="5dp"
+            android:paddingRight="15dp"
+            android:text="@string/rose_name"
+            android:textSize="32sp"/>
+        <TextView
+            style="@style/InfoTextMedium"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="Artist"
             android:paddingBottom="5dp"
-            android:text="@string/rose_name"/>
+            />
+
 
 
         <ScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            xmlns:android="http://schemas.android.com/apk/res/android">
+            android:layout_height="wrap_content">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
 
-
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:gravity="center"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:orientation="horizontal">
 
                     <ImageView
-                        style="@style/SmallIcon"
                         android:id="@+id/phoneIV"
+                        style="@style/SmallIcon"
                         android:onClick="smsClick"
                         />
 
                     <ImageView
-                        style="@style/SmallIcon"
                         android:id="@+id/emailIV"
+                        style="@style/SmallIcon"
                         android:onClick="emailClick"/>
 
 
                     <ImageView
-                        style="@style/SmallIcon"
                         android:id="@+id/instaIV"
+                        style="@style/SmallIcon"
                         android:onClick="igClick"
                         android:scaleType="centerCrop"
                         />
 
 
                     <ImageView
-                        style="@style/SmallIcon"
                         android:id="@+id/fbIV"
+                        style="@style/SmallIcon"
                         android:layout_width="45dp"
                         android:layout_height="45dp"
-                        android:scaleType="centerCrop"
                         android:layout_marginRight="0dp"
                         android:onClick="fbClick"
+                        android:scaleType="centerCrop"
                         />
 
                 </LinearLayout>
@@ -98,19 +106,24 @@
                     android:layout_marginRight="20dp"
                     android:text=""/>
 
-                <Button
+                <TextView
                     style="@style/PurpleButton"
-                    android:text="@string/about_me"
-                    android:onClick="showAboutRose"/>
-                <Button
+                    android:onClick="showAboutRose"
+                    android:gravity="center"
+                    android:text="@string/about_me"/>
+
+                <TextView
                     style="@style/PurpleButton"
+                    android:onClick="showBookingPolicy"
                     android:text="@string/policies"
-                    android:onClick="showBookingPolicy"/>
+                    android:gravity="center"
+
+                    />
             </LinearLayout>
 
         </ScrollView>
 
     </LinearLayout>
 
-    </LinearLayout>
+</LinearLayout>
 

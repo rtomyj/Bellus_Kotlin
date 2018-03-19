@@ -16,7 +16,7 @@ class Domus : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.domus_activity)
 
-        supportActionBar?.elevation = 0f
+        supportActionBar?.hide()
 
         val preferences = PreferenceManager.getDefaultSharedPreferences(this)
         if ( ! preferences.getBoolean(Preferences.SHOWED_POLICIES_ON_FIRST_LAUNCH.toString(), false)){
